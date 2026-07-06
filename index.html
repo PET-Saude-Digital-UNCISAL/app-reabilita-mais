@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reabilita+ | Assiduidade na Reabilitação</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-shape bg-shape--one" aria-hidden="true"></div>
+  <div class="bg-shape bg-shape--two" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="shell">
+      <p class="brand">Reabilita+</p>
+      <div class="progress-wrap" aria-label="Progresso das telas">
+        <span id="progressText">Tela 1 de 10</span>
+        <div class="progress-bar" role="progressbar" aria-valuemin="1" aria-valuemax="10" aria-valuenow="1">
+          <div id="progressFill"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="site-main" aria-live="polite">
+    <div class="shell">
+
+    <section class="screen active" data-step="1">
+      <h1>Reabilita+</h1>
+      <h2>Sua jornada rumo à recuperação começa aqui!</h2>
+      <p><strong>Bem-vindo(a)!</strong></p>
+      <p>
+        Este aplicativo foi desenvolvido para mostrar como sua presença nas sessões de
+        reabilitação pode contribuir para uma recuperação mais eficiente e para a conquista
+        de mais autonomia no dia a dia.
+      </p>
+      <button class="btn btn-primary" data-next>Começar</button>
+    </section>
+
+    <section class="screen" data-step="2">
+      <h2>Cada passo importa</h2>
+      <p class="lead">A reabilitação acontece um passo de cada vez.</p>
+      <p>
+        Cada sessão representa uma nova oportunidade de aprender, evoluir e superar desafios.
+      </p>
+      <p>
+        Comparecer regularmente permite que o tratamento tenha continuidade e favorece o
+        alcance dos objetivos definidos junto à equipe de reabilitação.
+      </p>
+      <figure class="illustration">
+        <div class="illustration-icon">👣</div>
+        <figcaption>Pegadas formando um caminho.</figcaption>
+      </figure>
+      <button class="btn btn-primary" data-next>Próximo</button>
+    </section>
+
+    <section class="screen" data-step="3">
+      <h2>Por que não devo faltar?</h2>
+      <p class="lead">Sua presença faz toda a diferença!</p>
+      <ul>
+        <li>mantém a continuidade do tratamento;</li>
+        <li>potencializa sua evolução;</li>
+        <li>reduz o risco de retrocessos;</li>
+        <li>fortalece sua autonomia;</li>
+        <li>aumenta suas chances de alcançar melhores resultados.</li>
+      </ul>
+      <figure class="illustration">
+        <div class="illustration-icon">📅</div>
+        <figcaption>Calendário com dias marcados.</figcaption>
+      </figure>
+      <button class="btn btn-primary" data-next>Continuar</button>
+    </section>
+
+    <section class="screen" data-step="4">
+      <h2>Como sua presença faz diferença</h2>
+      <p class="lead">Cada sessão é uma oportunidade de evoluir.</p>
+      <p>
+        Ao comparecer às sessões, a equipe acompanha sua evolução e pode ajustar o tratamento
+        conforme suas necessidades.
+      </p>
+      <p>Com isso, você pode:</p>
+      <ul>
+        <li>desenvolver novas habilidades;</li>
+        <li>fortalecer sua autonomia;</li>
+        <li>superar desafios do dia a dia;</li>
+        <li>conquistar mais qualidade de vida.</li>
+      </ul>
+      <p class="highlight">
+        A continuidade do tratamento é um dos principais fatores para alcançar bons resultados
+        na reabilitação.
+      </p>
+      <figure class="illustration">
+        <div class="illustration-icon">❤️</div>
+        <figcaption>Profissional acompanhando paciente em atividade de reabilitação.</figcaption>
+      </figure>
+      <button class="btn btn-primary" data-next>Próximo</button>
+    </section>
+
+    <section class="screen" data-step="5">
+      <h2>O que acontece quando faltamos?</h2>
+      <p class="lead">As faltas podem impactar sua recuperação.</p>
+      <p>
+        Quando há muitas ausências, o tratamento pode perder continuidade, tornando a evolução
+        mais lenta e aumentando o tempo necessário para alcançar os objetivos da reabilitação.
+      </p>
+      <p>
+        Se surgir algum imprevisto, entre em contato com a equipe para receber orientações.
+      </p>
+      <figure class="illustration">
+        <div class="illustration-icon">⚠️</div>
+        <figcaption>Calendário com uma sessão desmarcada.</figcaption>
+      </figure>
+      <button class="btn btn-primary" data-next>Continuar</button>
+    </section>
+
+    <section class="screen" data-step="6">
+      <h2>Dicas para manter a frequência</h2>
+      <p class="lead">Pequenas atitudes ajudam você a não esquecer das sessões.</p>
+      <ul>
+        <li>Anote os dias das consultas.</li>
+        <li>Ative lembretes no celular.</li>
+        <li>Organize seu transporte com antecedência.</li>
+        <li>Separe os documentos necessários.</li>
+        <li>Em caso de imprevisto, avise a equipe de reabilitação.</li>
+      </ul>
+      <figure class="illustration">
+        <div class="illustration-icon">💡</div>
+        <figcaption>Checklist de preparação para as sessões.</figcaption>
+      </figure>
+      <button class="btn btn-primary" data-next>Testar meus conhecimentos</button>
+    </section>
+
+    <section class="screen quiz-screen" data-step="7">
+      <h2>Você sabia?</h2>
+      <p class="lead">Verdadeiro ou Falso?</p>
+      <p class="question">"Faltar algumas sessões não interfere na reabilitação."</p>
+
+      <form id="quizForm" class="quiz-options">
+        <label>
+          <input type="radio" name="answer" value="verdadeiro" />
+          Verdadeiro
+        </label>
+        <label>
+          <input type="radio" name="answer" value="falso" />
+          Falso
+        </label>
+        <button type="submit" class="btn btn-secondary">Verificar resposta</button>
+      </form>
+
+      <div id="quizFeedback" class="feedback" hidden></div>
+
+      <div class="quiz-actions">
+        <button id="tryAgainBtn" class="btn btn-outline" type="button" hidden>Tentar novamente</button>
+        <button id="quizContinueBtn" class="btn btn-primary" type="button" hidden>Continuar</button>
+      </div>
+    </section>
+
+    <section class="screen" data-step="8">
+      <h2>Sua conquista</h2>
+      <p class="lead">Você é capaz de alcançar grandes conquistas!</p>
+      <p>
+        Com dedicação, apoio da equipe e participação ativa no tratamento, é possível conquistar
+        mais independência para realizar atividades do dia a dia e melhorar sua qualidade de vida.
+      </p>
+      <p>Cada sessão aproxima você dos seus objetivos.</p>
+      <figure class="illustration">
+        <div class="illustration-icon">🏆</div>
+        <figcaption>Pessoa caminhando, subindo um pequeno degrau e sorrindo.</figcaption>
+      </figure>
+      <button class="btn btn-primary" data-next>Próximo</button>
+    </section>
+
+    <section class="screen" data-step="9">
+      <h2>Uma mensagem para você</h2>
+      <p class="lead">Você é o protagonista da sua recuperação.</p>
+      <p>
+        A equipe de reabilitação está ao seu lado em cada etapa dessa jornada.
+      </p>
+      <p>
+        Seu compromisso em comparecer às sessões fortalece o tratamento e contribui para melhores
+        resultados.
+      </p>
+      <p>Juntos, podemos construir novas conquistas.</p>
+      <button class="btn btn-primary" data-next>Finalizar</button>
+    </section>
+
+    <section class="screen" data-step="10">
+      <h2>Encerramento</h2>
+      <p class="final-title">NÃO FALTE ÀS SUAS SESSÕES</p>
+      <p>Cada atendimento faz diferença na sua reabilitação.</p>
+      <ul>
+        <li>Compareça às sessões.</li>
+        <li>Mantenha a continuidade do tratamento.</li>
+        <li>Invista no seu progresso.</li>
+      </ul>
+      <p class="quote">
+        "Seu compromisso de hoje é um passo importante para as conquistas de amanhã."
+      </p>
+      <button id="restartBtn" class="btn btn-primary" type="button">Voltar ao início</button>
+    </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell">
+      <p>Reabilita+ | Assiduidade e evolução em cada sessão.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
