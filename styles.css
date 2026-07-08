@@ -92,14 +92,20 @@ body {
 }
 
 .site-footer .shell {
-  padding: 14px 0 18px;
+  padding: 12px 0;
 }
 
 .site-footer p {
   margin: 0;
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 0.75rem;
   color: var(--muted);
+  line-height: 1.4;
+  padding-bottom: 4px;
+}
+
+.site-footer p:first-child {
+  font-weight: 600;
 }
 
 .brand {
@@ -107,6 +113,22 @@ body {
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--blue-900);
+}
+
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* Espaçamento entre os logos e o texto */
+  flex-shrink: 0; /* Impede que o container encolha */
+}
+
+.header-logo {
+  height: 35px; /* Altura fixa para os logos */
+  width: auto;
+}
+
+.logo-uncisal {
+  height: 50px; /* Aumenta ligeiramente o tamanho do logo da Uncisal */
 }
 
 .progress-wrap {
@@ -142,11 +164,86 @@ body {
 .screen {
   display: none;
   padding-top: 6px;
+  max-width: 940px;
+  margin: 0 auto;
   animation: rise 0.35s ease;
 }
 
 .screen.active {
   display: block;
+}
+
+.audio-inline-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #b7d9f1;
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--blue-900);
+  width: 38px;
+  height: 38px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 4px 0 12px;
+  transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.audio-side {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.audio-side > :first-child {
+  flex: 1;
+}
+
+.audio-side .audio-inline-btn {
+  margin: 2px 0 0;
+  flex-shrink: 0;
+}
+
+.hero-actions {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: minmax(180px, 240px) minmax(240px, 360px);
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.welcome-video {
+  width: 100%;
+  max-width: 360px;
+  border-radius: 12px;
+  border: 1px solid #cfe5f7;
+  box-shadow: 0 8px 20px rgba(15, 61, 115, 0.12);
+  background: #0e2134;
+}
+
+.welcome-video-panel {
+  width: 100%;
+  max-width: 360px;
+  display: grid;
+  gap: 10px;
+}
+
+.video-play-btn {
+  width: 100%;
+}
+
+.audio-inline-btn:hover {
+  transform: translateY(-1px);
+  background: #eef7ff;
+}
+
+.audio-inline-btn.playing {
+  background: linear-gradient(90deg, var(--green-700), var(--blue-700));
+  color: #ffffff;
+  border-color: transparent;
 }
 
 h1,
@@ -332,6 +429,7 @@ li {
 
   .site-header .shell {
     min-height: 78px;
+    flex-wrap: nowrap; /* Impede que o cabeçalho quebre em duas linhas */
     padding: 10px 0;
   }
 
@@ -350,6 +448,26 @@ li {
 
   .btn {
     width: 100%;
+  }
+
+  .audio-inline-btn {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+  }
+
+  .audio-side {
+    gap: 8px;
+  }
+
+  .hero-actions {
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+    gap: 14px;
+  }
+
+  .welcome-video {
+    max-width: 100%;
   }
 
   .quiz-actions {
