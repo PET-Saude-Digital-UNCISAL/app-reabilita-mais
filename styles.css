@@ -10,10 +10,16 @@
   --muted: #4d6b86;
   --shadow: 0 16px 40px rgba(15, 61, 115, 0.14);
   --radius: 20px;
+  --page-gutter: clamp(16px, 5vw, 48px);
 }
 
 * {
   box-sizing: border-box;
+}
+
+img,
+video {
+  max-width: 100%;
 }
 
 body {
@@ -53,7 +59,7 @@ body {
 }
 
 .shell {
-  width: min(1100px, calc(100% - 48px));
+  width: min(1100px, calc(100% - (var(--page-gutter) * 2)));
   margin: 0 auto;
 }
 
@@ -120,6 +126,7 @@ body {
   align-items: center;
   gap: 0.75rem; /* Espaçamento entre os logos e o texto */
   flex-shrink: 0; /* Impede que o container encolha */
+  min-width: 0;
 }
 
 .header-logo {
@@ -164,7 +171,7 @@ body {
 .screen {
   display: none;
   padding-top: 6px;
-  max-width: 940px;
+  width: min(940px, calc(100% - (var(--page-gutter) * 2)));
   margin: 0 auto;
   animation: rise 0.35s ease;
 }
@@ -199,6 +206,7 @@ body {
 
 .audio-side > :first-child {
   flex: 1;
+  min-width: 0;
 }
 
 .audio-side .audio-inline-btn {
@@ -209,7 +217,7 @@ body {
 .hero-actions {
   margin-top: 14px;
   display: grid;
-  grid-template-columns: minmax(180px, 240px) minmax(240px, 360px);
+  grid-template-columns: minmax(180px, 240px) minmax(0, 360px);
   align-items: center;
   justify-content: space-between;
   gap: 20px;
@@ -229,6 +237,7 @@ body {
   max-width: 360px;
   display: grid;
   gap: 10px;
+  justify-self: end;
 }
 
 .video-play-btn {
@@ -268,6 +277,7 @@ li,
 label {
   font-size: clamp(1rem, 1.8vw, 1.08rem);
   line-height: 1.65;
+  overflow-wrap: break-word;
 }
 
 .lead {
@@ -319,6 +329,9 @@ li {
   font-weight: 700;
   cursor: pointer;
   transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.2s ease;
+  min-height: 46px;
+  max-width: 100%;
+  white-space: normal;
 }
 
 .btn:hover {
@@ -419,18 +432,35 @@ li {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --page-gutter: 18px;
+  }
+
   body {
     padding: 0;
   }
 
-  .shell {
-    width: calc(100% - 24px);
+  .site-header .shell {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    min-height: 74px;
+    padding: 10px 0;
+    column-gap: 12px;
+    row-gap: 8px;
   }
 
-  .site-header .shell {
-    min-height: 78px;
-    flex-wrap: nowrap; /* Impede que o cabeçalho quebre em duas linhas */
-    padding: 10px 0;
+  .brand-text {
+    display: none; /* Oculta o texto "Reabilita+" em telas pequenas */
+  }
+
+  .brand-container {
+    gap: 8px;
+  }
+
+  .header-logo {
+    height: 30px;
+    max-width: 82px;
+    object-fit: contain;
   }
 
   .site-main {
@@ -439,6 +469,8 @@ li {
 
   .progress-wrap {
     text-align: left;
+    min-width: 0;
+    width: 100%;
   }
 
   .progress-bar {
@@ -466,8 +498,10 @@ li {
     gap: 14px;
   }
 
-  .welcome-video {
+  .welcome-video,
+  .welcome-video-panel {
     max-width: 100%;
+    justify-self: stretch;
   }
 
   .quiz-actions {
@@ -476,5 +510,107 @@ li {
 
   .screen {
     padding-top: 4px;
+  }
+
+  .site-footer p {
+    font-size: 0.7rem; /* Reduz um pouco mais a fonte no mobile */
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 560px) {
+  :root {
+    --page-gutter: 14px;
+  }
+
+  .site-header {
+    position: static;
+  }
+
+  .site-header .shell {
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .brand-container {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header-logo {
+    height: 32px;
+    max-width: 45%;
+  }
+
+  .progress-wrap {
+    text-align: center;
+  }
+
+  .progress-bar {
+    height: 9px;
+  }
+
+  h1 {
+    font-size: 1.85rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  p,
+  li,
+  label {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  ul {
+    padding-left: 18px;
+  }
+
+  .audio-side {
+    align-items: center;
+  }
+
+  .illustration {
+    margin: 14px 0 18px;
+    padding: 12px;
+  }
+
+  .quiz-options label {
+    align-items: flex-start;
+  }
+
+  .final-title {
+    font-size: 1.15rem;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 380px) {
+  :root {
+    --page-gutter: 12px;
+  }
+
+  .header-logo {
+    height: 28px;
+  }
+
+  h1 {
+    font-size: 1.65rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  .btn {
+    padding-inline: 14px;
+  }
+
+  .audio-side {
+    gap: 6px;
   }
 }
