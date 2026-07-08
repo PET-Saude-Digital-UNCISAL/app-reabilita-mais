@@ -12,8 +12,12 @@
 
   <header class="site-header">
     <div class="shell">
-      <p class="brand">Reabilita+</p>
-      <div class="progress-wrap" aria-label="Progresso das telas">
+      <div class="brand-container">
+        <img src="logo pet saude.png" alt="Logo PET Saúde" class="header-logo" />
+        <img src="logo uncisal.png" alt="Logo Uncisal" class="header-logo logo-uncisal" />
+      </div>
+
+      <div class="progress-wrap" aria-label="Progresso das telas" style="flex-grow: 1;">
         <span id="progressText">Tela 1 de 10</span>
         <div class="progress-bar" role="progressbar" aria-valuemin="1" aria-valuemax="10" aria-valuenow="1">
           <div id="progressFill"></div>
@@ -23,26 +27,38 @@
   </header>
 
   <main class="site-main" aria-live="polite">
-    <div class="shell">
 
     <section class="screen active" data-step="1">
       <h1>Reabilita+</h1>
       <h2>Sua jornada rumo à recuperação começa aqui!</h2>
+      <button class="audio-inline-btn" type="button" data-audio-key="t1-p12" aria-label="Ouvir áudio do título da tela 1" aria-pressed="false">🔊</button>
       <p><strong>Bem-vindo(a)!</strong></p>
       <p>
         Este aplicativo foi desenvolvido para mostrar como sua presença nas sessões de
         reabilitação pode contribuir para uma recuperação mais eficiente e para a conquista
         de mais autonomia no dia a dia.
       </p>
-      <button class="btn btn-primary" data-next>Começar</button>
+      <button class="audio-inline-btn" type="button" data-audio-key="t1-p22" aria-label="Ouvir áudio do conteúdo da tela 1" aria-pressed="false">🔊</button>
+      <div class="hero-actions">
+        <button class="btn btn-primary" data-next>Começar</button>
+        <div class="welcome-video-panel">
+          <video class="welcome-video" controls preload="metadata">
+            <source src="video tia unci.mp4" type="video/mp4" />
+            <source src="video.mp4" type="video/mp4" />
+          </video>
+          <button id="videoPlayBtn" class="btn btn-secondary video-play-btn" type="button">Reproduzir vídeo</button>
+        </div>
+      </div>
     </section>
 
     <section class="screen" data-step="2">
       <h2>Cada passo importa</h2>
       <p class="lead">A reabilitação acontece um passo de cada vez.</p>
+      <button class="audio-inline-btn" type="button" data-audio-key="t2-p12" aria-label="Ouvir áudio da primeira parte da tela 2" aria-pressed="false">🔊</button>
       <p>
         Cada sessão representa uma nova oportunidade de aprender, evoluir e superar desafios.
       </p>
+      <button class="audio-inline-btn" type="button" data-audio-key="t2-p22" aria-label="Ouvir áudio da segunda parte da tela 2" aria-pressed="false">🔊</button>
       <p>
         Comparecer regularmente permite que o tratamento tenha continuidade e favorece o
         alcance dos objetivos definidos junto à equipe de reabilitação.
@@ -57,6 +73,7 @@
     <section class="screen" data-step="3">
       <h2>Por que não devo faltar?</h2>
       <p class="lead">Sua presença faz toda a diferença!</p>
+      <button class="audio-inline-btn" type="button" data-audio-key="t3-p12" aria-label="Ouvir áudio da primeira parte da tela 3" aria-pressed="false">🔊</button>
       <ul>
         <li>mantém a continuidade do tratamento;</li>
         <li>potencializa sua evolução;</li>
@@ -64,6 +81,7 @@
         <li>fortalece sua autonomia;</li>
         <li>aumenta suas chances de alcançar melhores resultados.</li>
       </ul>
+      <button class="audio-inline-btn" type="button" data-audio-key="t3-p22" aria-label="Ouvir áudio da segunda parte da tela 3" aria-pressed="false">🔊</button>
       <figure class="illustration">
         <div class="illustration-icon">📅</div>
         <figcaption>Calendário com dias marcados.</figcaption>
@@ -74,6 +92,7 @@
     <section class="screen" data-step="4">
       <h2>Como sua presença faz diferença</h2>
       <p class="lead">Cada sessão é uma oportunidade de evoluir.</p>
+      <button class="audio-inline-btn" type="button" data-audio-key="t4-p13" aria-label="Ouvir áudio da primeira parte da tela 4" aria-pressed="false">🔊</button>
       <p>
         Ao comparecer às sessões, a equipe acompanha sua evolução e pode ajustar o tratamento
         conforme suas necessidades.
@@ -85,10 +104,12 @@
         <li>superar desafios do dia a dia;</li>
         <li>conquistar mais qualidade de vida.</li>
       </ul>
+      <button class="audio-inline-btn" type="button" data-audio-key="t4-p23" aria-label="Ouvir áudio da segunda parte da tela 4" aria-pressed="false">🔊</button>
       <p class="highlight">
         A continuidade do tratamento é um dos principais fatores para alcançar bons resultados
         na reabilitação.
       </p>
+      <button class="audio-inline-btn" type="button" data-audio-key="t4-p33" aria-label="Ouvir áudio da terceira parte da tela 4" aria-pressed="false">🔊</button>
       <figure class="illustration">
         <div class="illustration-icon">❤️</div>
         <figcaption>Profissional acompanhando paciente em atividade de reabilitação.</figcaption>
@@ -98,11 +119,13 @@
 
     <section class="screen" data-step="5">
       <h2>O que acontece quando faltamos?</h2>
+      <button class="audio-inline-btn" type="button" data-audio-key="t5-p12" aria-label="Ouvir áudio da primeira parte da tela 5" aria-pressed="false">🔊</button>
       <p class="lead">As faltas podem impactar sua recuperação.</p>
       <p>
         Quando há muitas ausências, o tratamento pode perder continuidade, tornando a evolução
         mais lenta e aumentando o tempo necessário para alcançar os objetivos da reabilitação.
       </p>
+      <button class="audio-inline-btn" type="button" data-audio-key="t5-p22" aria-label="Ouvir áudio da segunda parte da tela 5" aria-pressed="false">🔊</button>
       <p>
         Se surgir algum imprevisto, entre em contato com a equipe para receber orientações.
       </p>
@@ -116,6 +139,7 @@
     <section class="screen" data-step="6">
       <h2>Dicas para manter a frequência</h2>
       <p class="lead">Pequenas atitudes ajudam você a não esquecer das sessões.</p>
+      <button class="audio-inline-btn" type="button" data-audio-key="t6-p12" aria-label="Ouvir áudio da primeira parte da tela 6" aria-pressed="false">🔊</button>
       <ul>
         <li>Anote os dias das consultas.</li>
         <li>Ative lembretes no celular.</li>
@@ -123,6 +147,7 @@
         <li>Separe os documentos necessários.</li>
         <li>Em caso de imprevisto, avise a equipe de reabilitação.</li>
       </ul>
+      <button class="audio-inline-btn" type="button" data-audio-key="t6-p22" aria-label="Ouvir áudio da segunda parte da tela 6" aria-pressed="false">🔊</button>
       <figure class="illustration">
         <div class="illustration-icon">💡</div>
         <figcaption>Checklist de preparação para as sessões.</figcaption>
@@ -134,6 +159,7 @@
       <h2>Você sabia?</h2>
       <p class="lead">Verdadeiro ou Falso?</p>
       <p class="question">"Faltar algumas sessões não interfere na reabilitação."</p>
+      <button class="audio-inline-btn" type="button" data-audio-key="t7-p13" aria-label="Ouvir áudio da pergunta da tela 7" aria-pressed="false">🔊</button>
 
       <form id="quizForm" class="quiz-options">
         <label>
@@ -158,10 +184,12 @@
     <section class="screen" data-step="8">
       <h2>Sua conquista</h2>
       <p class="lead">Você é capaz de alcançar grandes conquistas!</p>
+      <button class="audio-inline-btn" type="button" data-audio-key="t8-p12" aria-label="Ouvir áudio da primeira parte da tela 8" aria-pressed="false">🔊</button>
       <p>
         Com dedicação, apoio da equipe e participação ativa no tratamento, é possível conquistar
         mais independência para realizar atividades do dia a dia e melhorar sua qualidade de vida.
       </p>
+      <button class="audio-inline-btn" type="button" data-audio-key="t8-p22" aria-label="Ouvir áudio da segunda parte da tela 8" aria-pressed="false">🔊</button>
       <p>Cada sessão aproxima você dos seus objetivos.</p>
       <figure class="illustration">
         <div class="illustration-icon">🏆</div>
@@ -172,6 +200,7 @@
 
     <section class="screen" data-step="9">
       <h2>Uma mensagem para você</h2>
+      <button class="audio-inline-btn" type="button" data-audio-key="t9-p12" aria-label="Ouvir áudio da tela 9" aria-pressed="false">🔊</button>
       <p class="lead">Você é o protagonista da sua recuperação.</p>
       <p>
         A equipe de reabilitação está ao seu lado em cada etapa dessa jornada.
@@ -186,8 +215,11 @@
 
     <section class="screen" data-step="10">
       <h2>Encerramento</h2>
+      <button class="audio-inline-btn" type="button" data-audio-key="t10-p01" aria-label="Ouvir áudio do título da tela 10" aria-pressed="false">🔊</button>
       <p class="final-title">NÃO FALTE ÀS SUAS SESSÕES</p>
       <p>Cada atendimento faz diferença na sua reabilitação.</p>
+      <p>A equipe de reabilitação está ao seu lado em cada etapa dessa jornada.</p>
+      <button class="audio-inline-btn" type="button" data-audio-key="t10-p02" aria-label="Ouvir áudio da segunda parte da tela 10" aria-pressed="false">🔊</button>
       <ul>
         <li>Compareça às sessões.</li>
         <li>Mantenha a continuidade do tratamento.</li>
@@ -198,12 +230,13 @@
       </p>
       <button id="restartBtn" class="btn btn-primary" type="button">Voltar ao início</button>
     </section>
-    </div>
   </main>
 
   <footer class="site-footer">
     <div class="shell">
-      <p>Reabilita+ | Assiduidade e evolução em cada sessão.</p>
+      <p>Projeto Desenvolvido por:</p>
+      <p>Monitora da Saúde : Vitória Manuelly Alves Ribeiro Guraduanda de Tecnologia em Radiologia</p>
+      <p>Monitora de Sistemas Para Internet : Daniely Evellin da Silva Vasconcelos Graduanda de Tecnologia em Sistemas para Internet</p>
     </div>
   </footer>
 
