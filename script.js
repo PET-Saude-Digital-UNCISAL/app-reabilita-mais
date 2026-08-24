@@ -17,11 +17,11 @@ const audioByKey = {
   't1-p22': 'Tela 1 - Parte 22.mp3.mpeg',
   't2-p12': 'Tela 2 - Parte 12.mp3.mpeg',
   't2-p22': 'Tela 2 - Parte 22.mp3.mpeg',
-  't3-p12': 'Tela 3 - Parte 12.mp3.mpeg',
-  't3-p22': 'Tela 3 - Parte 22.mp3.mpeg',
-  't4-p13': 'Tela 4 - Parte 13.mp3.mpeg',
-  't4-p23': 'Tela 4 - Parte 23.mp3.mpeg',
-  't4-p33': 'Tela 4 - Parte 33.mp3.mpeg',
+  't3-p13': 'Tela 3 - Parte 13.mp3.mpeg',
+  't3-p23': 'Tela 3 - Parte 23.mp3.mpeg',
+  't3-p33': 'Tela 3 - Parte 33.mp3.mpeg',
+  't4-p12': 'Tela 4 - Parte 12.mp3.mpeg',
+  't4-p22': 'Tela 4 - Parte 22.mp3.mpeg',
   't5-p12': 'Tela 5 - Parte 12.mp3.mpeg',
   't5-p22': 'Tela 5 - Parte 22.mp3.mpeg',
   't6-p12': 'Tela 6 - Parte 12.mp3.mpeg',
@@ -31,9 +31,9 @@ const audioByKey = {
   't7-p33': 'Tela 7 - Parte 33 (resposta certa).mp3.mpeg',
   't8-p12': 'Tela 8 - Parte 12.mp3.mpeg',
   't8-p22': 'Tela 8 - Parte 22.mp3.mpeg',
-  't9-p12': 'Tela 9 - Parte 12.mp3.mpeg',
-  't10-p01': ['parte 10 01.m4a', 'parte 10 01.mp4', '10 01.m4a', '10 01.mp4', 'Tela 10 01.m4a', 'Tela 10 01.mp4'],
-  't10-p02': ['parte 10 02.m4a', 'parte 10 02.mp4', '10 02.m4a', '10 02.mp4', 'Tela 10 02.m4a', 'Tela 10 02.mp4']
+  't9-p12': 'Tela 9.mp3.mpeg',
+  't10-p01': 'Tela 10 - Parte 12.mp3.mpeg',
+  't10-p02': 'Tela 10 - Parte 22.mp3.mpeg'
 };
 
 let currentScreen = 0;
